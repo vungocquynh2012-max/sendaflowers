@@ -3,148 +3,151 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Senda Flowers – Sen đá may mắn & chữa lành</title>
+<title>Senda Flowers – May mắn & Chữa lành</title>
 
 <style>
 :root{
-  --bg:#f4fbf7;
-  --green:#2e8b57;
-  --green2:#6fbf9c;
-  --text:#1f2f27;
-  --card:#ffffff;
+  --green:#3a8f6b;        /* xanh ngọc chủ đạo */
+  --green-soft:#eaf6f1;   /* nền xanh rất nhạt */
+  --cream:#fbf7f2;        /* kem sữa */
+  --beige:#f3ece4;        /* be ấm */
+  --dark:#0e2a1f;         /* chữ chính */
+  --gray:#5f6f68;         /* chữ phụ */
+  --shadow:0 12px 28px rgba(0,0,0,0.08);
 }
-
-*{box-sizing:border-box;font-family:"Segoe UI",sans-serif;}
+*{box-sizing:border-box;font-family:'Segoe UI',sans-serif}
 
 body{
   margin:0;
-  background:var(--bg);
-  color:var(--text);
+  background:linear-gradient(180deg,#f7fbf9,#f2f6f4);
+  color:var(--dark);
   line-height:1.7;
 }
 
+p,li{color:var(--gray);}
+/* HEADER */
 header{
-  background:linear-gradient(135deg,#6fbf9c,#2e8b57);
+  background:linear-gradient(135deg,#3a8f6b,#78bfa0);
   color:white;
   text-align:center;
-  padding:70px 20px;
+  padding:95px 20px;
 }
 
-header h1{font-size:38px;margin-bottom:10px;}
-header p{max-width:720px;margin:auto;font-size:17px;}
+header h1{
+  font-size:2.7rem;
+  letter-spacing:1px;
+}
 
-section{
-  padding:60px 20px;
-  max-width:1100px;
+header p{
+  max-width:650px;
   margin:auto;
+  color:#f0fffa;
 }
 
+/* SECTION */
+section{
+  max-width:1100px;
+  margin:70px auto;
+  padding:70px 22px;
+  border-radius:28px;
+  background:white;
+  box-shadow:var(--shadow);
+}
+
+section:nth-child(even){
+  background:linear-gradient(180deg,var(--cream),white);
+}
+
+/* STORY */
+.story{
+  background:linear-gradient(135deg,#eaf6f1,#fbf7f2);
+  border-radius:28px;
+  padding:45px;
+  box-shadow:var(--shadow);
+  border-left:6px solid var(--green);
+}
+.story h2{margin-bottom:18px}
+
+/* TITLES */
 h2{
   text-align:center;
-  color:var(--green);
-  margin-bottom:35px;
-  font-size:30px;
+  color:#145a3a;
+  font-size:2.3rem;
+  margin-bottom:30px;
+  font-weight:800;
 }
 
-.brand{
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:30px;
-  align-items:center;
-}
-.brand img{
-  width:100%;
-  border-radius:16px;
-}
+/* FEATURES */
+ul{max-width:700px;margin:0 auto 30px;list-style:none}
+ul li{padding:8px 0;font-size:1.05rem}
 
-.card{
-  background:var(--card);
-  padding:25px;
-  border-radius:18px;
-  box-shadow:0 8px 20px rgba(0,0,0,.06);
-}
-
-ul{padding-left:20px;}
-
+/* PRODUCT GRID */
 .grid{
   display:grid;
   grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-  gap:18px;
-}
-
-.grid img{
-  width:100%;
-  height:260px;
-  object-fit:cover;
-  border-radius:16px;
-  box-shadow:0 6px 16px rgba(0,0,0,.08);
-}
-
-.price{
-  margin-top:6px;
-  font-weight:600;
-  color:var(--green);
-}
-
-.products{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-  gap:20px;
+  gap:22px;
+  margin-bottom:40px;
 }
 
 .product{
-  background:white;
-  border-radius:18px;
-  padding:20px;
-  box-shadow:0 8px 20px rgba(0,0,0,.07);
-  text-align:center;
+  background:linear-gradient(180deg,#ffffff,#f6fbf9);
+  border-radius:22px;
+  padding:22px;
+  box-shadow:0 10px 22px rgba(0,0,0,0.07);
+  transition:.3s;
+  border:1px solid #e6f2ec;
 }
 
-.product h3{margin:10px 0;color:var(--green);}
+.product:hover{
+  transform:translateY(-6px);
+  box-shadow:0 18px 38px rgba(0,0,0,0.12);
+}
 
+.product h3{
+  color:#1e5f43;
+  font-weight:700;
+}
+
+.price{
+  color:#b07b3b;
+  font-weight:700;
+  font-size:1.1rem;
+}
+/* CONTACT */
 .contact{
   display:grid;
   grid-template-columns:1fr 1fr;
-  gap:25px;
+  gap:28px;
+}
+@media(max-width:700px){
+  .contact{grid-template-columns:1fr}
 }
 
 input,textarea{
   width:100%;
-  padding:12px;
-  border-radius:10px;
-  border:1px solid #cce3d7;
-  margin-bottom:12px;
+  padding:13px;
+  border-radius:12px;
+  border:1px solid #dcebe4;
+  margin-bottom:14px;
+  background:#fbfefd;
 }
 
 button{
-  background:var(--green);
+  background:linear-gradient(135deg,#3a8f6b,#78bfa0);
   color:white;
   border:none;
-  padding:12px 20px;
-  border-radius:25px;
+  padding:13px 28px;
+  border-radius:30px;
   font-size:16px;
+  font-weight:600;
+  box-shadow:0 6px 16px rgba(58,143,107,0.35);
 }
 
 footer{
-  background:#e8f6ef;
+  background:linear-gradient(135deg,#0e2a1f,#1e4d39);
+  color:#e8f7f1;
   text-align:center;
-  padding:30px 15px;
-  margin-top:50px;
-  font-size:14px;
-}
-
-.social a{
-  display:inline-block;
-  margin:8px 10px;
-  padding:10px 18px;
-  border-radius:25px;
-  background:var(--green);
-  color:white;
-  text-decoration:none;
-}
-
-@media(max-width:800px){
-  .brand,.contact{grid-template-columns:1fr;}
+  padding:35px 15px;
 }
 </style>
 </head>
@@ -152,103 +155,72 @@ footer{
 <body>
 
 <header>
-<h1>SENDA FLOWERS</h1>
-<p>Sen đá may mắn – chữa lành – quà tặng tinh tế  
-<br>Trao một chậu cây – gửi một chút bình an 🌿</p>
+  <h1>SENDA FLOWERS</h1>
+  <p>Quà tặng từ sen đá & hoa – mang năng lượng may mắn, bình an và chữa lành</p>
 </header>
 
-<section class="brand">
-<img src="images/IMG_7242.jpeg">
-<div class="card">
-<h2>Câu chuyện Senda Flowers</h2>
-<p>Senda Flowers ra đời từ niềm yêu thích những chậu sen đá nhỏ bé nhưng bền bỉ.  
-Với Quỳnh, sen đá không chỉ là cây trang trí, mà là biểu tượng của sự kiên cường, chữa lành và may mắn.</p>
-<p>Mỗi sản phẩm đều được làm thủ công, chăm chút từng chi tiết – mong rằng khi một chậu cây được trao đi, người nhận sẽ cảm thấy được yêu thương và an yên hơn.</p>
-</div>
+<section class="story">
+  <h2>🌿 Câu chuyện của Senda Flowers</h2>
+  <p style="max-width:720px;margin:auto;text-align:center;font-size:1.05rem">
+    Senda Flowers ra đời từ niềm yêu thích những chậu sen đá nhỏ bé nhưng bền bỉ.  
+    Với Quỳnh, sen đá không chỉ là cây trang trí, mà là biểu tượng của sự kiên cường, chữa lành và may mắn.  
+    Mỗi chậu cây – mỗi món quà tại Senda Flowers đều được làm bằng sự nâng niu, mong mang lại năng lượng tốt lành cho người nhận.
+  </p>
 </section>
 
 <section>
-<h2>Sản phẩm & dịch vụ</h2>
-<div class="products">
-<div class="product">
-<h3>🌱 Bó sen đá may mắn</h3>
-<p>Nhỏ xinh – tinh tế – phù hợp làm quà tặng nhẹ nhàng, để bàn, động viên.</p>
-<p class="price">Từ 120.000đ</p>
-</div>
-
-<div class="product">
-<h3>🎁 Giỏ quà – bình hoa</h3>
-<p>Quà sinh nhật – khai trương – tri ân. Nhận thiết kế theo yêu cầu.</p>
-<p class="price">Từ 499.000đ</p>
-</div>
-
-<div class="product">
-<h3>🏡 Lan mix sen đá – tiểu cảnh</h3>
-<p>Dòng cao cấp – phong thủy – chữa lành – trưng lâu.</p>
-<p class="price">Từ 999.000đ</p>
-</div>
-</div>
+<h2>💚 Senda Flowers mang đến</h2>
+<ul>
+<li>✔ Quà tặng sen đá – trao may mắn</li>
+<li>✔ Quà sinh nhật – khai trương – để bàn</li>
+<li>✔ Tiểu cảnh – chậu trang trí – chữa lành</li>
+<li>✔ Nhận set quà theo yêu cầu</li>
+<li>✔ Gói quà – viết thiệp – giao tận nơi</li>
+</ul>
 </section>
 
 <section>
-<h2>Bộ sưu tập Senda Flowers</h2>
+<h2>🖼 Bộ sưu tập Senda Flowers</h2>
 
 <h3>🌿 Quà sen đá – may mắn</h3>
 <div class="grid">
-<img src="images/IMG_7242.jpeg">
-<img src="images/IMG_7411.jpeg">
-<img src="images/IMG_8198.jpeg">
-<img src="images/IMG_8224.jpeg">
+<div class="product"><img src="images/IMG_7242.jpeg"><h3>Bó sen đá mini</h3><div class="price">120.000đ</div></div>
+<div class="product"><img src="images/IMG_7411.jpeg"><h3>Bó sen đá mini</h3><div class="price">120.000đ</div></div>
+<div class="product"><img src="images/IMG_8198.jpeg"><h3>Bó sen đá mini</h3><div class="price">120.000đ</div></div>
+<div class="product"><img src="images/IMG_8224.jpeg"><h3>Bó sen đá mini</h3><div class="price">120.000đ</div></div>
 </div>
 
 <h3>🎁 Quà tặng – sinh nhật – khai trương</h3>
 <div class="grid">
-<img src="images/IMG_8237.jpeg">
-<img src="images/IMG_8242.jpeg">
-<img src="images/IMG_8256.jpeg">
-<img src="images/IMG_8315.jpeg">
-<img src="images/IMG_8365.jpeg">
-<img src="images/IMG_8367.jpeg">
-<img src="images/IMG_8373.jpeg">
+<div class="product"><img src="images/IMG_8237.jpeg"><h3>Giỏ mây trắng</h3><div class="price">499.000đ</div></div>
+<div class="product"><img src="images/IMG_8242.jpeg"><h3>Giỏ mây trắng</h3><div class="price">499.000đ</div></div>
+<div class="product"><img src="images/IMG_8256.jpeg"><h3>Bình hoa nghệ thuật</h3><div class="price">599.000đ+</div></div>
+<div class="product"><img src="images/IMG_8315.jpeg"><h3>Bình hoa nghệ thuật</h3><div class="price">599.000đ+</div></div>
+<div class="product"><img src="images/IMG_8365.jpeg"><h3>Bình hoa nghệ thuật</h3><div class="price">599.000đ+</div></div>
+<div class="product"><img src="images/IMG_8367.jpeg"><h3>Bình hoa nghệ thuật</h3><div class="price">599.000đ+</div></div>
+<div class="product"><img src="images/IMG_8373.jpeg"><h3>Bình hoa nghệ thuật</h3><div class="price">599.000đ+</div></div>
 </div>
 
-<h3>🏡 Tiểu cảnh – lan mix sen đá</h3>
+<h3>🏡 Tiểu cảnh – sen đá để bàn</h3>
 <div class="grid">
-<img src="images/IMG_8333.png">
-<img src="images/IMG_8334.jpeg">
-<img src="images/IMG_8335.jpeg">
-<img src="images/IMG_8363.jpeg">
+<div class="product"><img src="images/IMG_8333.png"><h3>Chậu lan mix sen đá</h3><div class="price">999.000đ+</div></div>
+<div class="product"><img src="images/IMG_8334.jpeg"><h3>Chậu lan mix sen đá</h3><div class="price">999.000đ+</div></div>
+<div class="product"><img src="images/IMG_8335.jpeg"><h3>Chậu lan mix sen đá</h3><div class="price">999.000đ+</div></div>
+<div class="product"><img src="images/IMG_8363.jpeg"><h3>Chậu lan mix sen đá</h3><div class="price">999.000đ+</div></div>
 </div>
 </section>
 
 <section>
-<h2>Liên hệ Senda Flowers</h2>
-<div class="contact">
-<div class="card">
-<p>✔ Gói quà – viết thiệp – giao tận nơi  
-<br>✔ Nhận làm theo ngân sách  
-<br>✔ Tư vấn tận tâm – gửi ảnh duyệt trước</p>
-
-<div class="social">
-<a href="https://facebook.com/Sendaflowers">Facebook</a>
-<a href="https://zalo.me/0912722779">Zalo</a>
-</div>
-</div>
-
-<div class="card">
-<form>
-<input placeholder="Tên của bạn">
-<input placeholder="Số điện thoại">
-<textarea rows="4" placeholder="Nội dung cần tư vấn..."></textarea>
-<button>Gửi cho Senda Flowers</button>
-</form>
-</div>
+<h2>📞 Liên hệ đặt quà</h2>
+<div style="text-align:center">
+<p>Inbox fanpage hoặc Zalo để được tư vấn mẫu phù hợp & set quà theo yêu cầu</p><br>
+<button>Nhắn Facebook</button>
+<button style="margin-left:10px">Nhắn Zalo</button>
 </div>
 </section>
 
 <footer>
-Senda Flowers 🌿 Sen đá may mắn & chữa lành  
-<br>Hotline/Zalo: 0912 722 779
+🌿 Senda Flowers – Trao cây nhỏ, gửi bình an 💚
 </footer>
 
 </body>
