@@ -1,215 +1,196 @@
 <!DOCTYPE html>
 <html lang="vi">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Senda Flowers – Trao may mắn, gửi chữa lành</title>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Senda Flowers – May mắn & Chữa lành</title>
 
 <style>
 :root{
-  --green:#3f6f5b;
-  --light:#f6f8f5;
-  --gold:#f2d27c;
-  --dark:#2b2b2b;
+  --green-dark:#1f7f5c;
+  --green-main:#43b68d;
+  --green-light:#eaf6f0;
+  --cream:#f7f4ef;
+  --text-dark:#23423a;
 }
 
-*{box-sizing:border-box;font-family: 'Helvetica Neue', Arial, sans-serif;}
-body{margin:0;background:var(--light);color:var(--dark);line-height:1.7;}
+/* GLOBAL */
+*{
+  box-sizing:border-box;
+  font-family:'Segoe UI',sans-serif;
+  margin:0;
+  padding:0;
+}
 
+body{
+  background:linear-gradient(180deg,#f7fbf9,#f2f6f4);
+  color:var(--text-dark);
+  line-height:1.6;
+}
+
+/* HEADER */
 header{
-  background:linear-gradient(rgba(0,0,0,.45),rgba(0,0,0,.45)), url("images/Photoroom_20260111_143650.jpeg") center/cover no-repeat;
+  background:linear-gradient(135deg,var(--green-main),#9be2c8);
   color:white;
   text-align:center;
-  padding:90px 20px;
+  padding:80px 16px;
 }
-header h1{font-size:38px;margin-bottom:10px;letter-spacing:1px;}
-header p{font-size:18px;margin-bottom:30px;}
-.btns a{
-  display:inline-block;
-  margin:8px;
-  padding:12px 22px;
-  border-radius:30px;
-  text-decoration:none;
-  font-weight:600;
-}
-.btn-main{background:var(--gold);color:#333;}
-.btn-sub{background:white;color:#333;}
-
-section{padding:60px 20px;max-width:1100px;margin:auto;}
-h2{text-align:center;color:var(--green);font-size:30px;margin-bottom:15px;}
-.center{text-align:center;max-width:800px;margin:auto;}
-
-.grid{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
-  gap:18px;
-  margin-top:35px;
-}
-.grid img{
-  width:100%;
-  height:260px;
-  object-fit:cover;
-  border-radius:16px;
-  box-shadow:0 6px 16px rgba(0,0,0,.08);
-}
-
-.highlight{
-  background:white;
-  border-radius:26px;
-  padding:45px 25px;
-  box-shadow:0 10px 30px rgba(0,0,0,.06);
-}
-
-ul{list-style:none;padding:0;}
-ul li{padding:6px 0;}
-
-.contact{
-  background:linear-gradient(135deg,#3f6f5b,#6fa88a);
-  color:white;
-  border-radius:30px;
-  padding:50px 25px;
-}
-
-footer{
-  text-align:center;
-  padding:25px;
-  background:#2f4f43;
-  color:white;
-  font-size:14px;
-}
-
-.float-btn{
-  position:fixed;
-  right:18px;
-  bottom:18px;
-  background:#0bc153;
-  color:white;
-  padding:14px 18px;
-  border-radius:50px;
-  text-decoration:none;
-  font-weight:700;
-  box-shadow:0 6px 20px rgba(0,0,0,.2);
-}
-  /* ===== GALLERY ===== */
-
-#gallery{
-  background: linear-gradient(#f7fdfb,#eef8f3);
-  border-radius: 32px;
-  padding: 40px 16px;
-  margin-top: 40px;
-}
-.gallery-box{
-  background:white;
-  border-radius:26px;
-  padding:26px 16px 32px;
-  margin-top:30px;
-  box-shadow:0 10px 28px rgba(67,182,141,.15);
-  border:1px solid #e3f2ec;
-}
-#gallery h3{
-  color:#1f7f5c;
-  margin:40px 0 16px;
-  text-align:center;
-  font-weight:600;
+header h1{
+  font-size:2.8rem;
   letter-spacing:1px;
 }
-
-#gallery .grid{
-  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-  gap:14px;
+header p{
+  font-size:1.1rem;
+  margin-top:8px;
+  opacity:.9;
 }
-.gallery-box{
-  background:white;
+
+/* SECTION TITLE */
+.section-title{
+  text-align:center;
+  color:var(--green-dark);
+  font-size:2.3rem;
+  margin:24px 0 12px;
+  position:relative;
+}
+.section-title::after{
+  content:"";
+  display:block;
+  width:60px;
+  height:3px;
+  background:var(--green-main);
+  margin:8px auto 0;
+  border-radius:10px;
+}
+
+/* ABOUT */
+.about{
+  background:var(--green-light);
+  padding:32px 20px;
   border-radius:26px;
-  padding:26px 16px 32px;
-  margin-top:30px;
-  box-shadow:0 10px 28px rgba(67,182,141,.15);
+  margin:30px 16px;
+  box-shadow:0 6px 22px rgba(0,0,0,.08);
+}
+
+/* PRODUCT GRID */
+.grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:16px;
+  padding:0 16px;
+  margin-top:16px;
+}
+
+/* CARD */
+.card{
+  background:white;
+  border-radius:22px;
+  overflow:hidden;
+  box-shadow:0 10px 28px rgba(0,0,0,.12);
+  transition:transform .3s;
   border:1px solid #e3f2ec;
 }
-/* khung ảnh bộ sưu tập */
-#gallery img{
+.card:hover{
+  transform:translateY(-6px);
+  box-shadow:0 18px 38px rgba(0,0,0,.28);
+}
+
+.img-box{
+  position:relative;
   width:100%;
   aspect-ratio:1/1;
+  overflow:hidden;
+  background:#f3fbf6;
+}
+
+.img-box img{
+  width:100%;
+  height:100%;
   object-fit:cover;
-  border-radius:18px;
-  box-shadow:0 8px 20px rgba(0,0,0,0.08);
   transition:.35s;
-  background:#eaf6f0;
 }
 
-/* hiệu ứng */
-#gallery img:hover{
-  transform:scale(1.08);
-  box-shadow:0 14px 30px rgba(67,182,141,.35);
-}
-  .gallery {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-  gap: 14px;
-}
-
-.gallery-item {
-  border-radius: 18px;
-  overflow: hidden;
-  background: #f6faf7;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.06);
-}
-
-.gallery-item img {
-  width: 100%;
-  height: 220px;
-  object-fit: cover;
-  display: block;
-}
-  /* ===== CONTACT SECTION ===== */
-
-#contact{
-  padding:60px 16px;
+.card-body{
+  padding:16px;
   text-align:center;
 }
-
-#contact h2{
-  color:#1f7f5c;
-  font-size:32px;
-  margin-bottom:8px;
+.card-body h3{
+  color:var(--green-dark);
+  font-size:1.1rem;
+  margin:8px 0 6px;
+  font-weight:700;
+}
+.card-body p{
+  font-size:14px;
+  color:#555;
+  min-height:38px;
+}
+.price-tag{
+  position:absolute;
+  bottom:10px;
+  right:10px;
+  background:var(--green-main);
+  color:white;
+  padding:6px 12px;
+  border-radius:20px;
+  font-size:13px;
+  font-weight:700;
 }
 
-.contact-sub{
-  color:#5f8f7c;
-  margin-bottom:28px;
+/* BUTTON CTA */
+.btn{
+  display:inline-block;
+  margin-top:10px;
+  padding:10px 20px;
+  background:var(--green-main);
+  color:white;
+  border-radius:25px;
+  text-decoration:none;
+  font-weight:600;
   font-size:15px;
 }
-
-.contact-box {
-  max-width: 900px;
-  margin: 60px auto;
-  padding: 40px 26px;
-  border-radius: 28px;
-  background: linear-gradient(135deg, #e9f6ef, #f6fbf8);
-  box-shadow: 0 15px 40px rgba(0,0,0,0.08);
+.btn:hover{
+  background:var(--green-dark);
 }
 
-.contact-box h2 {
-  text-align: center;
-  color: #2f6f55;
-  font-size: 30px;
-  margin-bottom: 24px;
+/* GALLERY */
+.gallery .grid img{
+  border-radius:18px;
+  box-shadow:0 6px 18px rgba(0,0,0,.08);
+}
+
+/* CONTACT */
+#contact{
+  padding:60px 16px;
+}
+#contact .contact-box{
+  max-width:900px;
+  margin:auto;
+  background:linear-gradient(135deg,#f7fdfb,#eaf6f0);
+  padding:30px 24px 36px;
+  border-radius:28px;
+  box-shadow:0 12px 36px rgba(0,0,0,.12);
+  border:1px solid #e1f1ea;
+}
+#contact .contact-box h2{
+  text-align:center;
+  color:var(--green-dark);
+  margin-bottom:18px;
 }
 .contact-info{
   display:flex;
   justify-content:center;
-  gap:14px;
   flex-wrap:wrap;
+  gap:14px;
   margin-bottom:20px;
 }
-
 .contact-item{
   background:white;
   padding:10px 16px;
   border-radius:20px;
   font-size:14px;
   text-decoration:none;
-  color:#1f7f5c;
+  color:var(--green-dark);
   box-shadow:0 6px 14px rgba(0,0,0,.08);
 }
 
@@ -218,101 +199,91 @@ footer{
   flex-direction:column;
   gap:12px;
 }
-
 .contact-form input,
-.contact-box button {
-  background: linear-gradient(135deg, #4fb88f, #2f8f6b);
-  color: white;
-  border-radius: 30px;
-  padding: 12px 26px;
-  font-weight: 600;
+.contact-form textarea{
+  border:none;
+  border-radius:14px;
+  padding:12px 14px;
+  font-size:15px;
+  box-shadow:inset 0 0 0 1px #dceee6;
 }
-
 .contact-form button{
   margin-top:8px;
   border:none;
   border-radius:30px;
   padding:12px;
-  font-size:15px;
+  font-size:16px;
   background:linear-gradient(135deg,#6fd6a8,#2fbf8f);
   color:white;
   font-weight:600;
   box-shadow:0 10px 24px rgba(47,191,143,.45);
 }
 
-/* nút gọi nổi */
-
+/* FLOAT CALL BUTTON */
 .call-fixed{
   position:fixed;
   bottom:18px;
   right:16px;
   background:linear-gradient(135deg,#2fbf8f,#1f9f74);
   color:white;
-  padding:12px 18px;
+  padding:12px 20px;
   border-radius:40px;
   font-weight:600;
   text-decoration:none;
   box-shadow:0 12px 26px rgba(47,191,143,.55);
+  font-size:16px;
   z-index:999;
+}
+
+@media(max-width:700px){
+  .grid{grid-template-columns:1fr;}
+  .contact-info{flex-direction:column;}
 }
 </style>
 </head>
+
 <body>
 
 <header>
-  <h1>SENDA FLOWERS</h1>
-  <p>Trao may mắn – Gửi chữa lành</p>
-  <div class="btns">
-    <a class="btn-main" href="#gallery">Xem bộ sưu tập</a>
-    <a class="btn-sub" href="https://facebook.com/Sendaflowers">Facebook</a>
-    <a class="btn-sub" href="tel:0912722779">Gọi ngay</a>
-  </div>
+  <h1>SENDA FLOWERS 🌿</h1>
+  <p>Trao may mắn – Gửi yêu thương – Chữa lành</p>
 </header>
 
-<section>
-  <h2>🌿 Câu chuyện Senda Flowers</h2>
-  <p class="center">
-  Senda Flowers ra đời từ niềm yêu thích những chậu sen đá nhỏ bé nhưng bền bỉ.
-  Với Quỳnh, sen đá không chỉ là cây trang trí, mà là biểu tượng của sự kiên cường,
-  chữa lành và may mắn.  
-  <br><br>
-  Mỗi món quà tại Senda Flowers không chỉ để đẹp, mà để gửi gắm lời chúc an lành và
-  những năng lượng tích cực đến người nhận.
+<section class="about">
+  <p>
+    Senda Flowers ra đời từ niềm yêu thích những chậu sen đá nhỏ bé nhưng bền bỉ.  
+    Với Quỳnh, sen đá không chỉ là cây trang trí – mà là biểu tượng của sự kiên cường, may mắn và chữa lành.  
+    Mỗi sản phẩm được làm thủ công bằng cả trái tim, để khi bạn trao đi một chậu cây – người nhận sẽ cảm nhận được yêu thương, bình an và năng lượng tích cực.
   </p>
 </section>
 
-<section class="highlight">
-  <h2>🌸 SẢN PHẨM NỔI BẬT</h2>
-
+<section>
+  <div class="section-title">🌸 SẢN PHẨM NỔI BẬT</div>
   <div class="grid">
-
-    <!-- Quà sen đá – may mắn-->
     <div class="card">
       <div class="img-box">
         <img src="images/IMG_8333.png">
-        <div class="price-tag">2.200.000đ</div>
+        <div class="price-tag">120.000đ</div>
       </div>
       <div class="card-body">
-        <h3>Chậu Sen Đá mix Lan Hồ Điệp</h3>
-        <p>Nhẹ nhàng – tinh tế, phù hợp tặng bạn bè, đồng nghiệp, đối tác.</p>
+        <h3>Bó hoa nhỏ 1 bông to</h3>
+        <p>Nhẹ nhàng – Tinh tế – Quà ý nghĩa</p>
         <a class="btn" href="https://m.me/Sendaflowers" target="_blank">Đặt ngay</a>
       </div>
     </div>
 
-    <!-- Quà sinh nhật – khai trương – tri ân -->
     <div class="card">
       <div class="img-box">
-        <img src="images/IMG_8177.jpeg">
+        <img src="images/IMG_8315.jpeg">
         <div class="price-tag">499.000đ</div>
       </div>
       <div class="card-body">
         <h3>Giỏ mây trắng</h3>
-        <p>Trang nhã – sang nhẹ, thích hợp sinh nhật, khai trương nhỏ.</p>
+        <p>Trang nhã – Phù hợp sinh nhật/khai trương</p>
         <a class="btn" href="https://m.me/Sendaflowers" target="_blank">Đặt ngay</a>
       </div>
     </div>
 
-    <!--Tiểu cảnh – để bàn-->
     <div class="card">
       <div class="img-box">
         <img src="images/Photoroom_20260111_145026.jpeg">
@@ -320,12 +291,11 @@ footer{
       </div>
       <div class="card-body">
         <h3>Bình hoa nghệ thuật</h3>
-        <p>Cắm theo yêu cầu, tone màu tuỳ chọn.</p>
+        <p>Cắm theo yêu cầu, tone màu tùy chọn</p>
         <a class="btn" href="https://m.me/Sendaflowers" target="_blank">Đặt ngay</a>
       </div>
     </div>
 
-    <!-- Chậu Lan mix Sen đá thiết kế -->
     <div class="card">
       <div class="img-box">
         <img src="images/Photoroom_20260111_143650.jpeg">
@@ -333,90 +303,52 @@ footer{
       </div>
       <div class="card-body">
         <h3>Chậu lan mix sen đá</h3>
-        <p>Sang – bền – ý nghĩa, hợp biếu tặng, khai trương.</p>
+        <p>Sang – Bền – Ý nghĩa</p>
         <a class="btn" href="https://m.me/Sendaflowers" target="_blank">Đặt ngay</a>
       </div>
     </div>
-
   </div>
 </section>
 
-<section class="gallery" id="gallery">
-<h2>🖼 Bộ sưu tập Senda Flowers</h2>
+<section class="gallery">
+  <div class="section-title">🖼 Bộ sưu tập Senda Flowers</div>
 
-<div class="gallery-box">
-<h3>🌿 Quà sen đá – may mắn</h3>
-<div class="grid">
+  <div class="grid">
+    <div class="gallery-item"><img src="images/IMG_7242.jpeg"></div>
+    <div class="gallery-item"><img src="images/IMG_7411.jpeg"></div>
+    <div class="gallery-item"><img src="images/IMG_8177.jpeg"></div>
+    <div class="gallery-item"><img src="images/IMG_8198.jpeg"></div>
+    <div class="gallery-item"><img src="images/IMG_8224.jpeg"></div>
+    <div class="gallery-item"><img src="images/IMG_8237.jpeg"></div>
+    <div class="gallery-item"><img src="images/IMG_8242.jpeg"></div>
+    <div class="gallery-item"><img src="images/IMG_8256.jpeg"></div>
+    <div class="gallery-item"><img src="images/IMG_8365.jpeg"></div>
+    <div class="gallery-item"><img src="images/IMG_8367.jpeg"></div>
   </div>
-</div>
-
-<img src="images/IMG_7242.jpeg">
-<img src="images/IMG_7411.jpeg">
-<img src="images/IMG_8198.jpeg">
-<img src="images/IMG_8224.jpeg">
-</div>
-
-<h3>🎁 Quà tặng – sinh nhật – khai trương</h3>
-<div class="grid">
-<img src="images/IMG_8242.jpeg">
-<img src="images/IMG_8279.jpeg">
-<img src="images/IMG_8365.jpeg">
-<img src="images/IMG_8367.jpeg">
-<img src="images/IMG_8373.jpeg">
-</div>
-
-<h3>🏡 Tiểu cảnh – sen đá để bàn</h3>
-<div class="grid">
-<img src="images/IMG_8333.png">
-<img src="images/IMG_8334.jpeg">
-<img src="images/IMG_8335.jpeg">
-<img src="images/IMG_8363.jpeg">
-</div>
-</section>
-
-<form>
-<input type="text" placeholder="Tên của bạn">
-<input type="tel" placeholder="Số điện thoại">
-<textarea rows="4" placeholder="Bạn muốn đặt sản phẩm gì?"></textarea>
-<button type="button">Gửi yêu cầu</button>
-</form>
-</div>
 </section>
 
 <section id="contact">
-  <h2>Liên hệ Senda Flowers</h2>
-  <p class="contact-sub">Tiệm luôn sẵn sàng tư vấn mẫu phù hợp, ngân sách và ý nghĩa cho bạn 🌿</p>
-
+  <div class="section-title">📞 Liên hệ Senda Flowers</div>
   <div class="contact-box">
-
     <div class="contact-info">
-      <a class="contact-item" href="https://zalo.me/0912722779" target="_blank">
-        📱 Zalo: <b>0912 722 779</b>
-      </a>
-
-      <a class="contact-item" href="https://facebook.com/Sendaflowers" target="_blank">
-        📘 Facebook: Sendaflowers
-      </a>
+      <a class="contact-item" href="https://zalo.me/0912722779" target="_blank">📱 Zalo: 0912 722 779</a>
+      <a class="contact-item" href="https://facebook.com/Sendaflowers" target="_blank">📘 Facebook: Sendaflowers</a>  
     </div>
 
     <form class="contact-form">
-      <input type="text" placeholder="Tên của bạn" required>
-      <input type="tel" placeholder="Số điện thoại" required>
-      <textarea rows="3" placeholder="Bạn muốn đặt hoa / quà như thế nào?"></textarea>
-      <button type="submit">🌿 Gửi yêu cầu tư vấn</button>
+      <input type="text" placeholder="Tên của bạn">
+      <input type="tel" placeholder="Số điện thoại">
+      <textarea rows="4" placeholder="Bạn muốn đặt gì?"></textarea>
+      <button type="button">🌿 Gửi yêu cầu tư vấn</button>
     </form>
-
   </div>
 </section>
 
 <a class="call-fixed" href="tel:0912722779">📞 Gọi ngay</a>
 
 <footer>
-<p>© 2026 Senda Flowers – Hoa sen đá của Quỳnh</p>
+© 2026 Senda Flowers – Sen đá & Quà tặng xanh
 </footer>
-
-
 
 </body>
 </html>
-<!-- rebuild 2026-01 -->
