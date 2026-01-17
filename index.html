@@ -142,9 +142,97 @@ footer{
   transform:scale(1.08);
   box-shadow:0 14px 30px rgba(67,182,141,.35);
 }
+  /* ===== CONTACT SECTION ===== */
+
+#contact{
+  padding:60px 16px;
+  text-align:center;
+}
+
+#contact h2{
+  color:#1f7f5c;
+  font-size:32px;
+  margin-bottom:8px;
+}
+
+.contact-sub{
+  color:#5f8f7c;
+  margin-bottom:28px;
+  font-size:15px;
+}
+
+.contact-box{
+  max-width:520px;
+  margin:auto;
+  background:linear-gradient(145deg,#f7fdfb,#eaf6f0);
+  padding:28px 20px 32px;
+  border-radius:32px;
+  box-shadow:0 18px 40px rgba(67,182,141,.22);
+  border:1px solid #e1f1ea;
+}
+
+.contact-info{
+  display:flex;
+  justify-content:center;
+  gap:14px;
+  flex-wrap:wrap;
+  margin-bottom:20px;
+}
+
+.contact-item{
+  background:white;
+  padding:10px 16px;
+  border-radius:20px;
+  font-size:14px;
+  text-decoration:none;
+  color:#1f7f5c;
+  box-shadow:0 6px 14px rgba(0,0,0,.08);
+}
+
+.contact-form{
+  display:flex;
+  flex-direction:column;
+  gap:12px;
+}
+
+.contact-form input,
+.contact-form textarea{
+  border:none;
+  border-radius:14px;
+  padding:12px 14px;
+  font-size:14px;
+  box-shadow: inset 0 0 0 1px #dceee6;
+}
+
+.contact-form button{
+  margin-top:8px;
+  border:none;
+  border-radius:30px;
+  padding:12px;
+  font-size:15px;
+  background:linear-gradient(135deg,#6fd6a8,#2fbf8f);
+  color:white;
+  font-weight:600;
+  box-shadow:0 10px 24px rgba(47,191,143,.45);
+}
+
+/* nút gọi nổi */
+
+.call-fixed{
+  position:fixed;
+  bottom:18px;
+  right:16px;
+  background:linear-gradient(135deg,#2fbf8f,#1f9f74);
+  color:white;
+  padding:12px 18px;
+  border-radius:40px;
+  font-weight:600;
+  text-decoration:none;
+  box-shadow:0 12px 26px rgba(47,191,143,.55);
+  z-index:999;
+}
 </style>
 </head>
-
 <body>
 
 <header>
@@ -246,7 +334,6 @@ footer{
 
 <h3>🎁 Quà tặng – sinh nhật – khai trương</h3>
 <div class="grid">
-<img src="images/IMG_8237.jpeg">
 <img src="images/IMG_8242.jpeg">
 <img src="images/IMG_8256.jpeg">
 <img src="images/IMG_8315.jpeg">
@@ -285,19 +372,32 @@ footer{
 </section>
 
 <section id="contact">
-<h2>Liên hệ Senda Flowers</h2>
-<div class="contact">
-<p>📞 Zalo: 0912 722 779  
-<br>📘 Facebook: facebook.com/Sendaflowers</p>
+  <h2>Liên hệ Senda Flowers</h2>
+  <p class="contact-sub">Tiệm luôn sẵn sàng tư vấn mẫu phù hợp, ngân sách và ý nghĩa cho bạn 🌿</p>
 
-<form>
-<input type="text" placeholder="Tên của bạn">
-<input type="tel" placeholder="Số điện thoại">
-<textarea rows="4" placeholder="Nội dung cần tư vấn"></textarea>
-<button>Gửi liên hệ</button>
-</form>
-</div>
+  <div class="contact-box">
+
+    <div class="contact-info">
+      <a class="contact-item" href="https://zalo.me/0912722779" target="_blank">
+        📱 Zalo: <b>0912 722 779</b>
+      </a>
+
+      <a class="contact-item" href="https://facebook.com/Sendaflowers" target="_blank">
+        📘 Facebook: Sendaflowers
+      </a>
+    </div>
+
+    <form class="contact-form">
+      <input type="text" placeholder="Tên của bạn" required>
+      <input type="tel" placeholder="Số điện thoại" required>
+      <textarea rows="3" placeholder="Bạn muốn đặt hoa / quà như thế nào?"></textarea>
+      <button type="submit">🌿 Gửi yêu cầu tư vấn</button>
+    </form>
+
+  </div>
 </section>
+
+<a class="call-fixed" href="tel:0912722779">📞 Gọi ngay</a>
 
 <footer>
 <p>© 2026 Senda Flowers – Hoa sen đá của Quỳnh</p>
