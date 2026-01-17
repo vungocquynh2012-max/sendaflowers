@@ -17,7 +17,7 @@
 body{margin:0;background:var(--light);color:var(--dark);line-height:1.7;}
 
 header{
-  background:linear-gradient(rgba(0,0,0,.45),rgba(0,0,0,.45)), url("Hoa sen đá mix/ten-anh.jpg") center/cover no-repeat;
+  background:linear-gradient(rgba(0,0,0,.45),rgba(0,0,0,.45)), url("Hoa sen đá mix/Photoroom_20260111_143650.jpeg") center/cover no-repeat;
   color:white;
   text-align:center;
   padding:90px 20px;
@@ -90,6 +90,58 @@ footer{
   font-weight:700;
   box-shadow:0 6px 20px rgba(0,0,0,.2);
 }
+  /* ===== GALLERY ===== */
+
+#gallery{
+  background: linear-gradient(#f7fdfb,#eef8f3);
+  border-radius: 32px;
+  padding: 40px 16px;
+  margin-top: 40px;
+}
+.gallery-box{
+  background:white;
+  border-radius:26px;
+  padding:26px 16px 32px;
+  margin-top:30px;
+  box-shadow:0 10px 28px rgba(67,182,141,.15);
+  border:1px solid #e3f2ec;
+}
+#gallery h3{
+  color:#1f7f5c;
+  margin:40px 0 16px;
+  text-align:center;
+  font-weight:600;
+  letter-spacing:1px;
+}
+
+#gallery .grid{
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap:14px;
+}
+.gallery-box{
+  background:white;
+  border-radius:26px;
+  padding:26px 16px 32px;
+  margin-top:30px;
+  box-shadow:0 10px 28px rgba(67,182,141,.15);
+  border:1px solid #e3f2ec;
+}
+/* khung ảnh bộ sưu tập */
+#gallery img{
+  width:100%;
+  aspect-ratio:1/1;
+  object-fit:cover;
+  border-radius:18px;
+  box-shadow:0 8px 20px rgba(0,0,0,0.08);
+  transition:.35s;
+  background:#eaf6f0;
+}
+
+/* hiệu ứng */
+#gallery img:hover{
+  transform:scale(1.08);
+  box-shadow:0 14px 30px rgba(67,182,141,.35);
+}
 </style>
 </head>
 
@@ -126,11 +178,11 @@ footer{
     <div class="card">
       <div class="img-box">
         <img src="images/IMG_8333.png">
-        <div class="price-tag">120.000đ</div>
+        <div class="price-tag">2.200.000đ</div>
       </div>
       <div class="card-body">
-        <h3>Bó hoa nhỏ 1 bông to</h3>
-        <p>Nhẹ nhàng – tinh tế, phù hợp tặng bạn bè, đồng nghiệp.</p>
+        <h3>Chậu Sen Đá mix Lan Hồ Điệp</h3>
+        <p>Nhẹ nhàng – tinh tế, phù hợp tặng bạn bè, đồng nghiệp, đối tác.</p>
         <a class="btn" href="https://m.me/Sendaflowers" target="_blank">Đặt ngay</a>
       </div>
     </div>
@@ -180,8 +232,13 @@ footer{
 <section class="gallery" id="gallery">
 <h2>🖼 Bộ sưu tập Senda Flowers</h2>
 
+<div class="gallery-box">
 <h3>🌿 Quà sen đá – may mắn</h3>
 <div class="grid">
+  </div>
+}
+</div>
+}
 <img src="images/IMG_7242.jpeg">
 <img src="images/IMG_7411.jpeg">
 <img src="images/IMG_8198.jpeg">
